@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato com Rodrigo Lange</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Send Us a Message</h2>
+  <form action="https://formsubmit.co/rodrigolange@hotmail.com" method="POST">
+    <input type="text" name="nome" placeholder="Seu nome" required />
+    <input type="email" name="email" placeholder="Sua mensagem" required />
+    <textarea name="mensagem" placeholder="Digite aqui sua mensagem" rows="6" required></textarea>
+    
+    <!-- Prevent spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next" value="https://yourusername.github.io/thank-you.html">
+
+    <button type="submit">Enviar mensagem</button>
+  </form>
+</body>
+</html>
