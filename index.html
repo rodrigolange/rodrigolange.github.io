@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive iPad Buttons</title>
+    <title>Página pessoal de Rodrigo Lange</title>
     <style>
         /* Base styles */
         body {
@@ -46,7 +46,11 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         
-        /* Portrait orientation (vertical) */
+        /**************************************************
+         * Portrait orientation (vertical)                *
+         * Apenas para brincar e ver como funciona        *
+         * Projetado para uma tela de iPad                *
+         **************************************************/
         @media screen and (orientation: portrait) {
             .button-container {
                 flex-direction: column;
@@ -58,7 +62,11 @@
             }
         }
         
-        /* Landscape orientation (horizontal) */
+        /**************************************************
+         * Landscape orientation (horizontal)             *
+         * Apenas para brincar e ver como funciona        *
+         * Projetado para uma tela de iPad                *
+         **************************************************/
         @media screen and (orientation: landscape) {
             .button-container {
                 flex-direction: row;
@@ -76,9 +84,9 @@
 </head>
 <body>
     <div class="button-container">
-        <button class="button">Currículo</button>
-        <button class="button">Button 2</button>
-        <button class="button">Button 3</button>
+        <button class="button">Sobre mim</button>
+        <a href="https://github.com/rodrigolange" class="button-link">Meus projetos no GitHub</a>
+        <a href="http://lattes.cnpq.br/8853155075572300" class="button-link">Currículo Lattes</a>
         <a href="contato.html" class="button-link">Contato com Rodrigo Lange</a>
     </div>
 </body>
