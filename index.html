@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página pessoal de Rodrigo Lange</title>
     <style>
+        /* Base styles */
         body {
             margin: 0;
             padding: 20px;
@@ -47,17 +48,19 @@
         
         .button-container {
             display: flex;
-            gap: 20px;
-            padding: 20px;
-            width: 90%;
+            gap: 15px;
+            padding: 15px;
+            width: 100%;
             max-width: 800px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
         .button, .button-link {
-            padding: 15px 25px;
-            font-size: 15px;
+            padding: 12px 20px;
+            font-size: 16px;
             border: none;
-            border-radius: 12px;
+            border-radius: 10px;
             background-color: #0071e3;
             color: white;
             cursor: pointer;
@@ -66,13 +69,9 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
+            min-width: 150px;
+            white-space: nowrap;
         }
-
-        .button {
-          display: inline-block;
-          border: none; 
-          cursor: pointer;
-        }        
         
         .button:hover, .button-link:hover {
             background-color: #0062c3;
@@ -80,47 +79,25 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         
-        /**************************************************
-         * Portrait orientation (vertical)                *
-         * Apenas para brincar e ver como funciona        *
-         * Projetado para uma tela de iPad                *
-         **************************************************/
+        /* Portrait orientation (vertical) */
         @media screen and (orientation: portrait) {
-            .button-container {
-                flex-direction: column;
-            }
-            
-            .button, .button-link {
-                width: 100%;
-                max-width: 300px;
-            }
-            
             .profile-image {
                 height: auto;
                 aspect-ratio: 4/3;
             }
-        }
-        
-        /**************************************************
-         * Landscape orientation (horizontal)             *
-         * Apenas para brincar e ver como funciona        *
-         * Projetado para uma tela de iPad                *
-         **************************************************/
-        @media screen and (orientation: landscape) {
+            
             .button-container {
                 flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
             }
             
             .button, .button-link {
-                flex: 1 1 160px;
-                min-width: 160px;
-                max-width: 200px;
+                flex: 1 1 120px;
+                padding: 10px 15px;
+                font-size: 14px;
             }
         }
         
-        /* Adjustments for smaller screens */
+        /* Small screens */
         @media (max-width: 600px) {
             h1 {
                 font-size: 1.8rem;
@@ -130,6 +107,16 @@
                 height: auto;
                 aspect-ratio: 4/3;
                 font-size: 1.2rem;
+            }
+            
+            .button-container {
+                gap: 10px;
+            }
+            
+            .button, .button-link {
+                min-width: 120px;
+                padding: 8px 12px;
+                font-size: 13px;
             }
         }
     </style>
@@ -145,8 +132,8 @@
     <div class="button-container">
         <button class="button">Sobre mim</button>
         <a href="https://github.com/rodrigolange" class="button-link" target="_blank" rel="noopener noreferrer">Meus projetos no GitHub</a>
-        <a href="curriculum.html" class="button-link" target="_blank" rel="noopener noreferrer">Currículo Lattes</a>
-        <a href="contato.html" class="button-link" target="_blank" rel="noopener noreferrer">Contato com Rodrigo Lange</a>
+        <a href="curriculum.html" class="button-link">Currículo Lattes</a>
+        <a href="contato.html" class="button-link">Contato</a>
     </div>
 </body>
 </html>
