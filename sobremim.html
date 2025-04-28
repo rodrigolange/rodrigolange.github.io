@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Rodrigo Lange</title>
+    <style>
+        /* Base styles matching your site */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+        }
+        
+        .nav-container {
+            display: flex;
+            gap: 12px;
+            padding: 15px;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 8px;
+            background-color: #0071e3;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        
+        .nav-link:hover {
+            background-color: #0062c3;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #1d1d1f;
+            margin: 30px 0 15px;
+            border-bottom: 2px solid #0071e3;
+            padding-bottom: 5px;
+        }
+        
+        .content {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .hobbies-list {
+            padding-left: 20px;
+        }
+        
+        .hobbies-list li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .slideshow-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+        
+        .slide {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        
+        .slide.active {
+            display: block;
+            animation: fade 1.5s;
+        }
+        
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .nav-link {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <a href="index.html" class="nav-link">Página Inicial</a>
+        <a href="about.html" class="nav-link">Sobre mim</a>
+        <a href="https://github.com/rodrigolange" class="nav-link" target="_blank">GitHub</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+    </nav>
+    
+    <div class="header">
+        <h1>Sobre Rodrigo Lange</h1>
+    </div>
+    
+    <div class="slideshow-container">
+        <img src="foto1.jpg" class="slide active" alt="Foto 1">
+        <img src="foto2.jpg" class="slide" alt="Foto 2">
+        <img src="foto3.jpg" class="slide" alt="Foto 3">
+    </div>
+    
+    <div class="content">
+        <p>Lange</p>
+        
+        <h2>Meus hobbies</h2>
+        <ul class="hobbies-list">
+            <li>Programação e desenvolvimento de software para Sistemas Embarcados</li>
+            <li>Leitura de livros técnicos e ficção científica</li>
+            <li>Resolver integrais como passatempo</li>
+            <li>Esportes radicais</li>
+            <li>Heavy Metal</li>
+        </ul>
+        
+        <p>Para minha formação, clique no botão Currículo Lattes no menu acima</p>
+    </div>
+
+    <script>
+        // Image slideshow script
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            
+            function showSlide(n) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                currentSlide = (n + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+            
+            // Change image every 10 seconds
+            setInterval(nextSlide, 10000);
+            
+            // Initial slide show
+            showSlide(0);
+        });
+    </script>
+</body>
+</html>
