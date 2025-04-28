@@ -29,21 +29,20 @@
             font-size: 2.2rem;
             margin-bottom: 30px;
         }
-        
+
+        /******************************************
+         * Elemento para formatar a foto do aluno *
+         * fundo com a mesma cor do resto do css  *
+         ******************************************/
         .profile-image {
-            width: 100%;
-            max-width: 800px;
-            height: 600px;
-            object-fit: cover;
+            width: auto;      /* Imagem com o tamanho original */
+            max-width: 100%;  /* fit no espaco reservado */
+            height: auto;     /* manter aspecto */
+            max-height: 60vh; /* Limitar a 60% da pagina */
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-            background-color: #0071e3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
+            margin: 0 auto 40px;
+            display: block;
         }
         
         .button-container {
